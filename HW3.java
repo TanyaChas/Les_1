@@ -1,43 +1,11 @@
 public class HW3 {
     //    Напишіть метод, який знаходить найдовше слово серед трьох,
 //    використовуючи if/else
-    public static void Word () {
-        // Довжина слова s1, s2, s3.
-        String s1 = "September";
-        int len1 = s1.length();
-        String s2 = "Nowember";
-        int len2 = s2.length();
-        String s3 = "May";
-        int len3 = s3.length();
-
-        // Виведення кількості символів
-        System.out.println( "Кількості символів \"September\": " + len1 + " символи.");
-        System.out.println( "Кількості символів \"Nowember\": " + len2 + " символи.");
-        System.out.println( "Кількості символів \"May\": " + len3 + " символи.");
-
-        // Порівняння слів s1, s2, s3.
-        if (len1 > len2) {
-            System.out.println( "\nСлово \"September\" Довше слова \"Nowember\".");
-        }
-        else if (len1 < len2) {
-            System.out.println( "\nСлово \"September\" Довше слова \"Nowember\".");
-        }
-        else if (len2 < len3) {
-            System.out.println("\nСлово \"Nowember\" Довше слова \"May\".");
-        }
-        else if (len2 > len3) {
-            System.out.println("\nСлово \"Nowember\" Довше слова \"May\".");
-        }
-        else if (len1 > len3) {
-            System.out.println( "\nСлово \"May\" Коротше слова \"September\".");
-        }
-        else if (len1 < len3) {
-            System.out.println( "\nСлово \"May\" Коротше слова \"September\".");
-        }
-        else {
-            System.out.println( "len1". length());
-            System.out.println( "len2". length());
-            System.out.println( "len3". length());
+    public static String findLongestWord(String word1, String word2, String word3) {
+        if (word1.length() >= word2.length() && word1.length() >= word3.length()) {
+            return word1;
+        } else {
+            return word2.length() >= word1.length() && word2.length() >= word3.length() ? word2 : word3;
         }
     }
     // У класі Month створити метод, у якого 1 параметр типу даних
@@ -46,74 +14,75 @@ public class HW3 {
     //цього місяця (2023 рік). Перевірити роботу даного метода в
     //main
 
-    public static String Day() {
-        int month = 7;
-        String dayString="31";
-        switch(month){
-            case 1: dayString="1 - July";
-                break;
-            case 2: dayString="2 - July";
-                break;
-            case 3: dayString="3 - July";
-                break;
-            case 4: dayString="4 - July";
-                break;
-            case 5: dayString="5 - May";
-                break;
-            case 6: dayString="6 - July";
-                break;
-            case 7: dayString="7 - July";
-                break;
-            case 8: dayString="8 - July";
-                break;
-            case 9: dayString="9 - July";
-                break;
-            case 10: dayString="10 - July";
-                break;
-            case 11: dayString="11 - July";
-                break;
-            case 13: dayString="13 - July";
-                break;
-            case 14: dayString="14 - July";
-                break;
-            case 15: dayString="15 - July";
-                break;
-            case 16: dayString="16 - July";
-                break;
-            case 17: dayString="17 - July";
-                break;
-            case 18: dayString="18 - July";
-                break;
-            case 19: dayString="19 - July";
-                break;
-            case 20: dayString="20 - July";
-                break;
-            case 21: dayString="21 - July";
-                break;
-            case 22: dayString="22 - July";
-                break;
-            case 23: dayString="23 - July";
-                break;
-            case 24: dayString="24 - July";
-                break;
-            case 25: dayString="25 - July";
-                break;
-            case 26: dayString="26 - July";
-                break;
-            case 27: dayString="27 - July";
-                break;
-            case 28: dayString="28 - July";
-                break;
-            case 29: dayString="29 - July";
-                break;
-            case 30: dayString="30 - July";
-                break;
-            case 31: dayString="31 - July";
-                break;
-
-            default:System.out.println("Invalid !");
+    public static int Day() {
+        static int monthDayQuantity ( int monthNumber){
+            switch (monthNumber) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    System.out.println("31");
+                    break;
+                case 2:
+                    System.out.println("28");
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    System.out.println("30");
+                    break;
+                default:
+                    System.out.println("Sorry, this value is out of the range, please enter correct month number");
+            }
+            return monthNumber;
         }
-        System.out.println(dayString);
-        return dayString;
+    }
+
+    public static void printFirstChristmasTree() {
+        int i;
+        int j;
+        for(i = 1; i <= 5; ++i) {
+            for(j = 1; j <= i; ++j) {
+                System.out.print("x");
+            }
+
+            System.out.println();
+        }
+
+        for(i = 4; i >= 1; --i) {
+            for(j = 1; j <= i; ++j) {
+                System.out.print("x");
+            }
+
+            System.out.println();
+        }
+
+    }
+
+    public static void printSecondChristmasTree() {
+        for(int i = 4; i >= 1; --i) {
+            for(int j = 1; j <= i; ++j) {
+                System.out.print("x");
+            }
+
+            System.out.println();
+        }
+
+    }
+
+    public static void printThirdChristmasTree() {
+        for(int i = 1; i <= 5; ++i) {
+            for(int j = 1; j <= i; ++j) {
+                System.out.print("x");
+            }
+
+            System.out.println();
+        }
+
+        System.out.println();
     }
 }
