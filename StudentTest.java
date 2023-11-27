@@ -1,15 +1,11 @@
-public class StudentTest {
+class StudentTest {
+    public static void main(String[] args) {
+        Student.Student student1 = new Student.Student(1, "Laura", "Isa", 2, 4.5, 3.8, 4.2);
+        Student.Student student2 = new Student.Student(2, "Stepan", "Tetchenko", 3, 3.9, 4.1, 4.0);
+        Student.Student student3 = new Student.Student(3, "Veronika", "Sudor", 1, 4.2, 4.6, 3.7);
 
-    private String student1;
-    private String student2;
-    private String student3;
-    StudentTest student1 = new student1("10236", "Alex","Miller", 5, "mathematics = 5", "economic = 5", "english = 4");
-
-//            2 = new student("11102", "Rey","Grey", 1, "mathematics = 5", "economic = 5", "english = 5");
-//            3 = new student("10236", "Luna","Moon", 4, "mathematics = 3", "economic = 3", "english = 4");
-    );
+        System.out.println("The student's average arithmetic grade " + student1.firstName + " " + student1.lastName + ": " + student1.calculateAverageGrade());
+        System.out.println("The student's average arithmetic grade " + student2.firstName + " " + student2.lastName + ": " + student2.calculateAverageGrade());
+        System.out.println("The student's average arithmetic grade " + student3.firstName + " " + student3.lastName + ": " + student3.calculateAverageGrade());
+    }
 }
-// Попрошу вас розписати це завдання, бо шось воно не пішло. На лекціях ми розбираєсо одного студента,
-// а в завданні 3, тож мені складно виконати завдання, щось я роблю не так і не зрозуміла що.
-// Як новачок в цьому щось дуже складний курс. Чи можемо ми розбирати завдання на мітенгу,
-// замість питань теорії, краще б розібрали одне з завдань.
