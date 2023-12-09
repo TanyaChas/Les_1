@@ -10,7 +10,7 @@ public class Number {
         public static void main(String[] args) {
         int[] array = {10, 15, 25};
         try {
-            array[25] = 208;
+            array[15] = 208;
         }catch (IndexOutOfBoundsException exception){
             System.out.println(exception.getMessage());
         }
